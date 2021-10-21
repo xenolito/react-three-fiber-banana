@@ -26,7 +26,7 @@ const SceneBackground = ({count, depth}) => {
                 antialias: false,
             }}
             performance={{ min: 0.5 }}
-            dpr={[1, window.devicePixelRatio]}
+            dpr={[1, 1]}
             // dpr={Math.max(window.devicePixelRatio, 1)}
             mode="concurrent"
             camera={{ near: 0.001, far: 100, fov: 45 }}
