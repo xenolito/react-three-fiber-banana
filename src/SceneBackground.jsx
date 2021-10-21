@@ -47,9 +47,9 @@ const SceneBackground = ({count, depth}) => {
             <spotLight position={[10, 10, 10]} intensity={0.3} />
             <Suspense fallback={null}>
                 <FruitsContext.Provider value={{fruit, cambioFruit}} >
-                {<Instances />}
+                {/* <Instances /> */}
 
-                {/*
+                {
                 Array.from({ length: count }, (_, i) => (
                     <Banana
                         key={i}
@@ -58,7 +58,7 @@ const SceneBackground = ({count, depth}) => {
                         depth={depth}
                         bgColor={bgColor}
                     />
-                )) */
+                ))
                 }
 
                 {
