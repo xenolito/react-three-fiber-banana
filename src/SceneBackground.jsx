@@ -43,6 +43,7 @@ const SceneBackground = ({count, depth}) => {
                 args={[`rgb(${theme[fruit].bgColor[0]},${theme[fruit].bgColor[1]},${theme[fruit].bgColor[2]})`]}
             />
 
+
             <ambientLight intensity={0.2} />
             <spotLight position={[10, 10, 10]} intensity={0.3} />
             <Suspense fallback={null}>
