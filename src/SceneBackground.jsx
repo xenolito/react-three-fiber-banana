@@ -24,6 +24,7 @@ const SceneBackground = ({count, depth}) => {
             gl={{
                 alpha: false,
                 antialias: false,
+                powerPreference: "high-performance"
             }}
             performance={{ min: 0.5 }}
             dpr={[1, 1]}
