@@ -111,7 +111,7 @@ const Banana = ({ z, depth, bgTo, id }) => {
 }
 
 // ! INSTANCIANDO DIRECTAMENTE => NO mejora el rendimiento, RTF debe instanciarlas por defecto
-/* export const Instances = ({ count = 40, temp = new THREE.Object3D(), z = 80, depth = 80 }) => {
+export const Instances = ({ count = 40, temp = new THREE.Object3D(), z = 80, depth = 80 }) => {
     const ref = useRef()
     const { viewport, camera } = useThree()
     const [clicked, setClicked] = useState(false)
@@ -153,6 +153,6 @@ const Banana = ({ z, depth, bgTo, id }) => {
     })
 
     return <instancedMesh ref={ref} args={[geometry, materials.skin, count]}></instancedMesh>
-} */
+}
 
 export default Banana

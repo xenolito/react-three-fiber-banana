@@ -5,7 +5,7 @@ import { Html, useProgress, Stats, useContextBridge, OrbitControls } from '@reac
 import { EffectComposer, DepthOfField, Noise, Vignette } from '@react-three/postprocessing'
 import Overlay from './layout/Overlay'
 import { FadeIn } from './layout/styles'
-import Banana from './components/Banana'
+import Banana, {Instances} from './components/Banana'
 import {ColorsContext} from './context/ColorsProvider'
 import FruitsProvider, {FruitsContext} from './context/FruitsProvider'
 import Background from './components/Background'
@@ -26,7 +26,7 @@ const SceneBackground = ({count, depth}) => {
                 antialias: false,
             }}
             performance={{ min: 0.5 }}
-            dpr={[1, 1]}
+            dpr={[1, window.devicePixelRatio]}
             // dpr={Math.max(window.devicePixelRatio, 1)}
             mode="concurrent"
             camera={{ near: 0.001, far: 100, fov: 45 }}
@@ -47,9 +47,9 @@ const SceneBackground = ({count, depth}) => {
             <spotLight position={[10, 10, 10]} intensity={0.3} />
             <Suspense fallback={null}>
                 <FruitsContext.Provider value={{fruit, cambioFruit}} >
-                {/* <Instances /> */}
+                {<Instances />}
 
-                {
+                {/*
                 Array.from({ length: count }, (_, i) => (
                     <Banana
                         key={i}
@@ -58,7 +58,7 @@ const SceneBackground = ({count, depth}) => {
                         depth={depth}
                         bgColor={bgColor}
                     />
-                ))
+                )) */
                 }
 
                 {
