@@ -26,7 +26,8 @@ import { useContext } from 'react'
 
     return (
         <Container className="container">
-            <h1>{`The ${title}'s Life ···`}</h1>
+            {/* <h1>{`The ${title}'s Life ···`}</h1> */}
+            <h1>The <span className="outline">{title}'s</span> Life</h1>
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor

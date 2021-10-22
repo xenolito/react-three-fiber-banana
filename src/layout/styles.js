@@ -35,6 +35,11 @@ export const Container = styled.div`
         color: #202020;
         display: block;
         z-index: 2;
+
+        & .outline {
+            -webkit-text-stroke: 2px #343434;
+            -webkit-text-fill-color: #0000!important;
+        }
     }
 
     & p {

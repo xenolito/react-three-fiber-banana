@@ -27,7 +27,7 @@ const SceneBackground = ({count, depth}) => {
                 powerPreference: "high-performance"
             }}
             performance={{ min: 0.5 }}
-            dpr={[1, 1]}
+            dpr={[1, 1.5]}
             // dpr={Math.max(window.devicePixelRatio, 1)}
             mode="concurrent"
             camera={{ near: 0.001, far: 100, fov: 45 }}
@@ -39,14 +39,8 @@ const SceneBackground = ({count, depth}) => {
                     <Background />
                 </FruitsContext.Provider>
             </ColorsContext.Provider>
-            <color
-                attach="background"
-                args={[`rgb(${theme[fruit].bgColor[0]},${theme[fruit].bgColor[1]},${theme[fruit].bgColor[2]})`]}
-            />
-
-
             <ambientLight intensity={0.2} />
-            <spotLight position={[10, 10, 10]} intensity={0.3} />
+            <spotLight position={[10, 10, 10]} intensity={0.2} />
             <Suspense fallback={null}>
                 <FruitsContext.Provider value={{fruit, cambioFruit}} >
                 {/* <Instances /> */}

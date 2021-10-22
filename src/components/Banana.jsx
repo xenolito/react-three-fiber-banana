@@ -10,6 +10,7 @@ const Banana = ({ z, depth, bgTo, id }) => {
     const ref = useRef()
     const { viewport, camera } = useThree()
     const [clicked, setClicked] = useState(false)
+    const [hover, setHovered] = useState(false)
 
 
 
@@ -59,10 +60,7 @@ const Banana = ({ z, depth, bgTo, id }) => {
     }, [ref])
 
     useFrame((state) => {
-        if (clicked) {
-            // console.log(ref.current)
-            ref.current.material.wireframe = true
-        }
+        ref.current.material.wireframe = hover
 
 
 
@@ -94,6 +92,11 @@ const Banana = ({ z, depth, bgTo, id }) => {
             <mesh
                 ref={ref}
                 onClick={() => setClicked(!clicked)}
+                onPointerEnter={(e) => {
+                    e.stopPropagation()
+                    setHovered(true)
+                }}
+                onPointerLeave={(e) => setHovered(false)}
                 geometry={fruitModels[fruit].nodes[fruit].geometry}
                 scale={fruitModels[fruit].scale ? fruitModels[fruit].scale : 1}
                 rotation={fruitModels[fruit].rotation ? fruitModels[fruit].rotation : false}
