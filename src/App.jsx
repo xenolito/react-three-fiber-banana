@@ -5,7 +5,7 @@ import Overlay from './layout/Overlay'
 import { FadeIn } from './layout/styles'
 import ColorsProvider from './context/ColorsProvider'
 import FruitsProvider, {FruitsContext} from './context/FruitsProvider'
-import SceneBackground from './SceneBackground'
+import PageBackground from './components/PageBackground'
 
 
 const Loader = () => {

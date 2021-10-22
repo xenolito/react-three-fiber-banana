@@ -3,16 +3,16 @@ import React, { Suspense, useState, useContext } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Html, useProgress, Stats, useContextBridge, OrbitControls } from '@react-three/drei'
 import { EffectComposer, DepthOfField, Noise, Vignette } from '@react-three/postprocessing'
-import Overlay from './layout/Overlay'
-import { FadeIn } from './layout/styles'
-import Banana, {Instances} from './components/Banana'
-import {ColorsContext} from './context/ColorsProvider'
-import FruitsProvider, {FruitsContext} from './context/FruitsProvider'
-import Background from './components/Background'
+import Overlay from '../layout/Overlay'
+import { FadeIn } from '../layout/styles'
+import Banana, {Instances} from './Banana'
+import {ColorsContext} from '../context/ColorsProvider'
+import FruitsProvider, {FruitsContext} from '../context/FruitsProvider'
+import Background from './Background'
 
 
 
-const SceneBackground = ({count, depth}) => {
+const PageBackground = ({count, depth}) => {
     const [bgColor, setBgColor] = useState([255, 191, 64, 1])
 
     const {fruit, cambioFruit} = useContext(FruitsContext)
@@ -74,4 +74,4 @@ const SceneBackground = ({count, depth}) => {
     )
 }
 
-export default SceneBackground
+export default PageBackground
