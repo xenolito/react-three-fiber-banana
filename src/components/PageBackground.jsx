@@ -26,10 +26,12 @@ const PageBackground = ({count, depth}) => {
                 antialias: false,
                 powerPreference: "high-performance"
             }}
+            gl2 = "true"
             performance={{ min: 0.5 }}
             dpr={[1, 1.5]}
             // dpr={Math.max(window.devicePixelRatio, 1)}
             mode="concurrent"
+            shadows="false"
             camera={{ near: 0.001, far: 100, fov: 45 }}
             className="webglbg"
             style={{ position: 'fixed', height: '100vh', zIndex: '1' }}
