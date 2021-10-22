@@ -92,10 +92,7 @@ const Banana = ({ z, depth, bgTo, id }) => {
             <mesh
                 ref={ref}
                 onClick={() => setClicked(!clicked)}
-                onPointerEnter={(e) => {
-                    e.stopPropagation()
-                    setHovered(true)
-                }}
+                onPointerEnter={(e) => setHovered(true) }
                 onPointerLeave={(e) => setHovered(false)}
                 geometry={fruitModels[fruit].nodes[fruit].geometry}
                 scale={fruitModels[fruit].scale ? fruitModels[fruit].scale : 1}
